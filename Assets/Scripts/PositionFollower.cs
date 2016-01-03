@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PosMatch : MonoBehaviour {
-
+public class PositionFollower : MonoBehaviour
+{
     public GameObject target;
 	
-	// Update is called once per frame
-	void Update () {
+	void Update()
+    {
         transform.position = target.transform.position;
 	}
 }

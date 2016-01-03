@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZorbController : MonoBehaviour {
-
+public class ZorbController : MonoBehaviour
+{
     public float speed;
     public float jumpPow;
     public Camera cam;
-    private Bonker bonker;
+
+    private ZorbCollisionNoisemaker hitNoiser;
     private Rigidbody rb;
     private float lastHitTime;
 
     void Start () {
         rb = GetComponent<Rigidbody>();
-        bonker = GetComponentInChildren<Bonker>();
+        hitNoiser = GetComponentInChildren<ZorbCollisionNoisemaker>();
 	}
 
     void LateUpdate()
@@ -27,15 +28,12 @@ public class ZorbController : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        bonker.OnHit(col.relativeVelocity.magnitude);
+        hitNoiser.OnHit(col.relativeVelocity.magnitude);
     }
 
     void OnCollisionStay(Collision col)
     {
-        if (col.gameObject.name == "Terrain")
-        {
-            lastHitTime = 0f;
-        }
+        lastHitTime = 0f;
     }
 
     void FixedUpdate()
