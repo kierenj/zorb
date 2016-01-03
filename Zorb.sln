@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorb.CSharp.Plugins", "Zorb.CSharp.Plugins.csproj", "{F83331B0-A98D-FCB0-DC1A-A8419B6E3CD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorb.CSharp", "Zorb.CSharp.csproj", "{B21C460F-8157-16A2-5243-40206AF0DEC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zorb.CSharp.Editor", "Zorb.CSharp.Editor.csproj", "{460222E5-457B-9E17-5493-ABC661707FAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F83331B0-A98D-FCB0-DC1A-A8419B6E3CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83331B0-A98D-FCB0-DC1A-A8419B6E3CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83331B0-A98D-FCB0-DC1A-A8419B6E3CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83331B0-A98D-FCB0-DC1A-A8419B6E3CD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B21C460F-8157-16A2-5243-40206AF0DEC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21C460F-8157-16A2-5243-40206AF0DEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21C460F-8157-16A2-5243-40206AF0DEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21C460F-8157-16A2-5243-40206AF0DEC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460222E5-457B-9E17-5493-ABC661707FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460222E5-457B-9E17-5493-ABC661707FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460222E5-457B-9E17-5493-ABC661707FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460222E5-457B-9E17-5493-ABC661707FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
