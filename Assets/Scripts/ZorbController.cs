@@ -6,6 +6,7 @@ public class ZorbController : MonoBehaviour
     public float speed;
     public float jumpPow;
     public Camera cam;
+    public RunController run;
 
     private ZorbCollisionNoisemaker hitNoiser;
     private Rigidbody rb;
@@ -26,6 +27,14 @@ public class ZorbController : MonoBehaviour
         lastHitTime += Time.deltaTime;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Pickup"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
     void OnCollisionEnter(Collision col)
     {
         hitNoiser.OnHit(col.relativeVelocity.magnitude);
@@ -42,8 +51,14 @@ public class ZorbController : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         float jump = Input.GetAxis("Jump");
 
-        Vector3 movement = (cam.transform.forward * moveVertical + cam.transform.right * moveHorizontal) * speed + new Vector3(0, 1, 0) * jump * jumpPow;
+        Vector3 movement = (cam.transform.forward * moveVertical + cam.transform.right * moveHorizontal) * speed;
 
-        rb.AddForce(movement);
+        if (run.EnableControls)
+        {
+            //rb.angularVelocity *= 0.8f;
+            rb.AddTorque(cam.transform.right * moveVertical * speed);
+            rb.AddTorque(cam.transform.forward * -moveHorizontal * speed);
+            rb.AddForce(new Vector3(0, 1, 0) * jump * jumpPow);
+        }
     }
 }
